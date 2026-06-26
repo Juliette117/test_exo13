@@ -23,12 +23,12 @@ public class AccountStepDefinitions {
         accountService = new AccountService(new InMemoryAccountRepository());
     }
 
-    @Given("account {string} belongs to {string}")
+    @Given("an account {string} belongs to {string}")
     public void accountBelongsToHolder(String number, String holder) {
         accountService.createAccount(number, holder);
     }
 
-    @Given("account {string} belongs to {string} with balance {bigdecimal}")
+    @Given("an account {string} belongs to {string} with balance {bigdecimal}")
     public void accountBelongsToHolderWithBalance(String number, String holder, BigDecimal balance) {
         accountService.createAccount(number, holder);
         accountService.deposit(number, balance);
