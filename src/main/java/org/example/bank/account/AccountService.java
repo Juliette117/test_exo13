@@ -6,7 +6,9 @@ import org.example.bank.account.exception.AccountNotFoundException;
 import org.example.bank.account.exception.DuplicateAccountException;
 import org.example.bank.account.exception.InsufficientFundsException;
 import org.example.bank.account.exception.InvalidAmountException;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AccountService {
 
     private final AccountRepository accountRepository;
